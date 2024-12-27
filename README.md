@@ -1,10 +1,10 @@
 # Practical Application of NESA Software Engineering MLOps
 
-This Jupyter Notebook collection is designed to support students understand and apply Machine learning operations (MLOps) as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27.
+This Jupyter Notebook collection is designed to support students understand Machine learning operations (MLOps) and it's practical processes as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27.
 
 ![Course Specification MLOps Model](/images/MLOPS_Model.png)
 
-> [!Important]
+> [!TIP]
 > This a corrected version of the MLOps course specification. It is important that students see this model as an omnidirectional multi loop cycle. Particularly in the 'Model Development' stage, students should expect to loop through the cycle many times before having a model ready for the operations stage. Or that it is likely they will identify a design problem and cycle back in to the 'Design' stage, loop through it, then move forward and again loop repeatedly through the 'Model Development' stage.
 
 ## 1. Design
@@ -15,36 +15,39 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
    - Doctors often under estimate the progress of type II adult onset diabetes after diagnosis. Often resulting in the insufficient medical interventions and reduced health outcomes for patients.
 
-   - Doctors would like a valid and reliable tool for doctors to be able to enter an individuals health data and be provided with a valid and reliable output likely progression over the next 12 months.
+   - Doctors would like a valid and reliable tool for doctors to be able to enter an individuals health data and be provided with a valid and reliable prediction of the disease progression over the patients next 12 months.
 
 2. Refactoring the business problem into a machine learning problem
 
-   - Students to refactor the provided business problem
+   - _Students to refactor the provided business problem_
 
 3. Defining success metrics
 
-   - Students to define success metrics
+   - _Students to define success metrics_
 
 4. Researching available data.
 
-   - You have sourced a validated raw data set. The data is saved in the CSV file [2.1.2.Diabeties_Sample_Data.csv](/2.Model_Development/2.1.Data_Wrangling/2.1.2.Diabeties_Sample_Data.csv).
+   - Your have sourced a validated raw data set. The data is saved in the CSV file [2.1.2.Diabeties_Sample_Data.csv](/2.Model_Development/2.1.Data_Wrangling/2.1.2.Diabeties_Sample_Data.csv).
+
+     > [!Important]
+     > The information and ranges provided below are to help students understand the domain of the data, it is not intended as medical or diagnostic advice.
 
    - The data columns are:
 
-     | Column            | Data                                                                                                                                                                                                                                                                                  |
-     | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-     | DoB               | Patients Date of Birth D/MM/YYYY                                                                                                                                                                                                                                                      |
-     | DoT               | Date of Test D/MM/YYYY the date teh test data was collected                                                                                                                                                                                                                           |
-     | SEX               | Patients Gender ---                                                                                                                                                                                                                                                                   |
-     | BMI,              | Body mass index, gives an indication of your body size and is calculated using your weight and height ---                                                                                                                                                                             |
-     | BP                | Diastole blood pressure which is pressure of blood on the walls of your arteries when your heart is relaxed. <80 is desirable, 80-95 is high >95 is very high.                                                                                                                        |
-     | TC                | Total Cholesterol is a measure of the Cholesterol in your body which is essential in order for your body to continue building healthy cells, however having high cholesterol can increase your risk of heart disease. <5.5 is desirable 5.5-6.6 is borderline and >6.5 is undesirable |
-     | Blood Sugar Level | ---                                                                                                                                                                                                                                                                                   |
-     | FDR               | The number of family members in the individuals direct bloodline who have developed type 2 adult onset diabetes                                                                                                                                                                       |
-     | Target            | A quantitative measure of disease progression one year after baseline. Patients should aim towards `0` as this means the condition has not progressed further.                                                                                                                        |
+     | Column | Data                                                                                                                                                                                                                                                                                                 |
+     | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+     | DoB    | The patients Date of Birth recorded as D/MM/YYYY                                                                                                                                                                                                                                                     |
+     | DoT    | The patients date of testing records as D/MM/YYYY                                                                                                                                                                                                                                                    |
+     | SEX    | Patients gender ---                                                                                                                                                                                                                                                                                  |
+     | BMI,   | Patients body mass index, which gives an indication of the patients body size and is calculated using their weight and height ---                                                                                                                                                                    |
+     | BP     | Diastole blood pressure which is the pressure of blood on the walls of the patients arteries when their heart was relaxed. <80 is desirable, 80-95 is high >95 is very high.                                                                                                                         |
+     | TC     | Total cholesterol is a measure of the cholesterol in the patients body. Cholesterol is essential in order for your body to continue building healthy cells, however having high cholesterol can increase your risk of heart disease. <5.5 is desirable 5.5-6.6 is borderline and >6.5 is undesirable |
+     | BGU    | Patients fasting blood glucose levels. 75-99 is desirable and 100+ is undesirable.                                                                                                                                                                                                                   |
+     | FDR    | The number of family members in the individuals direct bloodline who have developed type 2 adult onset diabetes.                                                                                                                                                                                     |
+     | Target | A quantitative measure of disease progression one year after baseline. Patients should aim towards `0` as this means the condition has not progressed further.                                                                                                                                       |
 
-> [!Note]
-> This is a [real data set](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html) that has been modified for the purposes of teaching data wrangling and feature engineering.
+     > [!Note]
+     > This is a [real data set](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html) used in [real statistical medical research](https://imjohnstone.su.domains/WEBLIST/2004/LarsAnnStat04.pdf) that has been modified for the purposes of teaching data wrangling and feature engineering.
 
 ## 2. Model Development
 
@@ -98,3 +101,5 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 | Mode                | ----       |
 | Range               | ----       |
 | Standard Deviation  | ----       |
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Practical-Application-of-NESA-Software-Engineering-MLOps">Practical Application of NESA Software Engineering MLOps</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/benpaddlejones">Ben Jones</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; ">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
