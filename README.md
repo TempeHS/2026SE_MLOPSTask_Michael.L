@@ -79,11 +79,18 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 ### Deploying a Model
 
-1. The [Export Import Demonstration](/3.Operations/3.1.Deploy_Model/3.1.1.export_import_course_specification.ipynb) of the course specifications exports the model so a separate Python implementation can use it to make predictions. The demonstration also includes how to save a Matplotlib image so it can be used in a UI.
+1. The [Model Deployment](/3.Operations/3.1.Deploy_Model/3.1.1.Basic_Model_Depolyment.ipynb) exports the model so a separate Python implementation can use it to make predictions. The demonstration also includes how to save a Matplotlib image so it can be used in a UI or served by an API.
+
+   - Versioning
+   - Continuous Deployment (CD)
 
 2. Supporting operations/use
 
+   - Continuous Integration (CI)
+
 3. Monitoring model performance.
+
+   - Continuous Testing (CT)
 
 ## Metalanguage
 
