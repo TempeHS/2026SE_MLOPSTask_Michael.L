@@ -115,12 +115,20 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 Version control is essential for MLOps especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has teh benefit of supporting collaboration in the SDLC.
 
 ```mermaid
-gitGraph;
-    commit;
-    commit;
-    branch new-feature;
-    checkout new-feature;
-    commit;
+gitGraph
+    commit
+    commit
+    branch new-feature
+    checkout new-feature
+    commit
+```
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
 
 1. Create a new branch for our feature.
