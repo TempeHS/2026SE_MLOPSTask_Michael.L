@@ -81,7 +81,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 1. The [Model Deployment](/3.Operations/3.1.Deploy_Model/3.1.1.Basic_Model_Depolyment.ipynb) exports the model so a separate Python implementation can use it to make predictions. The demonstration also includes how to save a Matplotlib image so it can be used in a UI or served by an API.
 
-   - Versioning
+   - [Versioning](#mlops-version-control)
    - Continuous Deployment (CD)
 
 2. Supporting operations/use
@@ -91,6 +91,148 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 3. Monitoring model performance.
 
    - Continuous Testing (CT)
+
+## MLOps Version Control
+
+Version control is essential for MLOps especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has the benefit of supporting collaboration in the SDLC.
+
+1. Create a new branch for our feature.
+
+```bash
+git checkout -b new-feature main
+```
+
+```mermaid
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   branch new-feature
+   checkout new-feature
+```
+
+2. Develop the feature.
+   This checks out a branch called new-feature based on main, and the -b flag tells Git to create the branch if it doesn’t already exist. On this branch, you then edit, stage, and commit changes as you would, building up your new feature with as many commits as necessary:
+
+```bash
+git status
+git add <some-file>
+git commit
+```
+
+```mermaid
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   branch new-feature
+   checkout new-feature
+   commit
+   commit
+   commit
+```
+
+3. Make the development available to others in your team.
+   So other data scientists and software engineers collaborating with you can access the feature under development.
+
+```bash
+git push -u origin new-feature
+```
+
+The main branch can continue to be maintained including integration of other new features. You can pull any changes into your feature branch.
+
+```bash
+git pull -u origin main
+```
+
+This command pushes new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, you can call git push without any parameters to push her feature.
+
+4. Create a Pull request for the completed feature.
+
+Before merging it into main, you need to file a pull request letting the rest of the team know your feature is ready for testing and integration.
+
+```mermaid
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   branch new-feature
+   checkout new-feature
+   commit
+   commit
+   checkout main
+   commit
+   checkout new-feature
+   commit
+   commit id: "Pull request"
+```
+
+```Bash
+git push
+```
+
+Then, you create the pull request in the Git GUI asking to merge new-feature into main, and team members will be notified automatically. The great thing about pull requests is that they show comments right next to their related commits, so it's easy to ask questions about specific changesets.
+
+5. Review Pull request
+
+The pull request may be evaluated by you, your team, a sub team or the senior software engineer. Any changes to the Pull request should be made in teh Pull request interface for documentation.
+
+```mermaid
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   branch new-feature
+   checkout new-feature
+   commit
+   commit
+   checkout main
+   commit
+   checkout new-feature
+   commit
+   commit id: "Pull request"
+   commit
+   commit
+```
+
+6. Make any revisions generated through the Pull requestions
+   Edit, stage, commit, and push updates to the central repository.
+
+7. Merge the feature
+   Once teh team is ready to accept the pull request, someone needs to merge the feature into the stable project (this can be done by anyone in the team):
+
+```mermaid
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   branch new-feature
+   checkout new-feature
+   commit
+   commit
+   checkout main
+   commit
+   checkout new-feature
+   commit
+   commit id: "Pull request"
+   commit
+   commit
+   checkout main
+   commit
+   merge new-feature tag: "version 2.0" type: REVERSE
+```
+
+```bash
+git checkout main
+git pull
+git pull origin marys-feature
+git push
+```
 
 ## Metalanguage
 
@@ -109,77 +251,5 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 | Range               | The lowest and highest value.                                                                                                                                                                                                                                                                                                                       |
 | Standard Deviation  | Standard deviation is a measure of the amount of variation or dispersion of a set of data values around their mean. In machine learning, it is an important statistical concept that is used to describe the spread or distribution of a dataset.s                                                                                                  |
 | Target              | The target variable is the variable whose values are modelled and predicted by other variables.                                                                                                                                                                                                                                                     |
-
-## MLOps Version Control
-
-Version control is essential for MLOps especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has teh benefit of supporting collaboration in the SDLC.
-
-```mermaid
-gitGraph
-    commit
-    commit
-    branch new-feature
-    checkout new-feature
-    commit
-```
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-1. Create a new branch for our feature.
-
-```bash
-git checkout -b new-feature main
-```
-
-2. Develop the feature.
-   This checks out a branch called new-feature based on main, and the -b flag tells Git to create the branch if it doesn’t already exist. On this branch, you then edit, stage, and commit changes as you would, building up your new feature with as many commits as necessary:
-
-```bash
-git status
-git add <some-file>
-git commit
-```
-
-3. Make the development available to others in your team.
-   So other data scientists and software engineers collaborating with you can access the feature under development.
-
-```bash
-git push -u origin marys-feature
-```
-
-This command pushes new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, you can call git push without any parameters to push her feature.
-
-4. Create a Pull request for the completed feature.
-
-Before merging it into main, you need to file a pull request letting the rest of the team know your feature is ready for testing and integration.
-
-```Bash
-git push
-```
-
-Then, you create the pull request in the Git GUI asking to merge new-feature into main, and team members will be notified automatically. The great thing about pull requests is that they show comments right next to their related commits, so it's easy to ask questions about specific changesets.
-
-5. Review Pull request
-
-The pull request may be evaluated by you, your team, a sub team or the senior software engineer. Any changes to the Pull request should be made in teh Pull request interface for documentation.
-
-6. Make any revisions generated through the Pull requestions
-   Edit, stage, commit, and push updates to the central repository.
-
-7. Merge the feature
-   Once teh team is ready to accept the pull request, someone needs to merge the feature into the stable project (this can be done by anyone in the team):
-
-```bash
-git checkout main
-git pull
-git pull origin marys-feature
-git push
-```
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Practical-Application-of-NESA-Software-Engineering-MLOps">Practical Application of NESA Software Engineering MLOps</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/benpaddlejones">Ben Jones</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; ">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
