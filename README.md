@@ -75,24 +75,29 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 1. The [Model Testing and Validation Demonstration](/2.Model_Development/2.4.Model_Testing_and_Validation/2.4.1.model_test_and_validate.ipynb) provides a number of ways to evaluate, test and validate your model using a second set of test data and then refine your model. This demonstration uses a different regression algorithm to the course specifications.
 
-## Operations
+## 3. Operations
 
-### Deploying a Model
+### 3.1 Deploying a Model
 
 1. The [Model Deployment](/3.Operations/3.1.Deploy_Model/3.1.1.Basic_Model_Depolyment.ipynb) exports the model so a separate Python implementation can use it to make predictions. The demonstration also includes how to save a Matplotlib image so it can be used in a UI or served by an API.
 
-   - [Versioning](#mlops-version-control)
-   - Continuous Deployment (CD)
+### 3.2 Supporting operations/use
 
-2. Supporting operations/use
+- [Versioning](#mlops-version-control) through
+  - **Continuous integration (CI)** is a software development practice that automates the process of integrating code changes from multiple developers into a central repository.
+  - **Continuous deployment (CD)** is a strategy in software development where code changes to an application are released automatically into the production environment.
 
-   - Continuous Integration (CI)
+### 3.3 Monitoring model performance.
 
-3. Monitoring model performance.
+- **Continuous Testing (CT)** is a property unique to ML systems, that's is concerned with automatically retraining and serving the models.
 
-   - Continuous Testing (CT)
+[Watch this DataCamp Video](https://campus.datacamp.com/courses/fully-automated-mlops/automation-in-mlops-deployments?ex=10) about teh CI/CD/CT pipeline.
 
-## MLOps Version Control
+---
+
+## Support
+
+### MLOps Version Control
 
 Version control is essential for MLOps especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has the benefit of supporting collaboration in the SDLC.
 
@@ -234,7 +239,7 @@ git pull origin marys-feature
 git push
 ```
 
-## Metalanguage
+### Metalanguage
 
 | Metalanguage        | Definition                                                                                                                                                                                                                                                                                                                                          |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
