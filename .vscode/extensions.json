@@ -19,6 +19,7 @@
     "ms-toolsai.jupyter-renderers",
     "ms-toolsai.vscode-jupyter-slideshow",
     "ms-toolsai.datawrangler",
-    "bierner.markdown-mermaid"
+    "bierner.markdown-mermaid",
+    "ms-python.vscode-python-envs"
   ]
 }
