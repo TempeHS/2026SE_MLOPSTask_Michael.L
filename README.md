@@ -1,13 +1,32 @@
 # Practical Application of NESA Software Engineering MLOps
 
-This Jupyter Notebook collection is designed to support students understand Machine learning operations (MLOps) and it's practical processes as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27.
+This Jupyter Notebook collection is designed to support students understand Machine Learning Operations (MLOps) at the manual level of MLOps automation, specifically it's practical processes as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27. Students can then explore further how these processes can be automated under a DevOps/MLOps model.
 
 ![Course Specification MLOps Model](/images/MLOPS_Model.png)
 
-> [!TIP]
-> This a corrected version of the MLOps course specification. It is important that students see this model as an omnidirectional multi loop cycle. Particularly in the 'Model Development' stage, students should expect to loop through the cycle many times before having a model ready for the operations stage. Or that it is likely they will identify a design problem and cycle back in to the 'Design' stage, loop through it, then move forward and again loop repeatedly through the 'Model Development' stage.
+> [!Important]
+> This a corrected version of the MLOps course specification.
 
-## 1. Design
+## 3 Levels of MLOps Automation
+
+To implement MLOps, a team will progress through three levels of automation.
+
+### Level 1 MLOps Manual Process
+
+![Manual Process](/images/l1.png)
+**Manual process** is the data science processes, which are performed at the beginning of implementing ML. This level has an experimental and iterative nature. Every step in each pipeline, such as data preparation and feature engineering, model training and testing, are executed manually. Data Engineers use Rapid Application Development (RAD) tools, such as Jupyter Notebooks.
+
+### Level 2 MLOps ML pipeline automation
+
+![ML pipeline automation](/images/l3.png)
+**ML pipeline automation**. The next level includes the execution of model training automatically. We introduce here the continuous training of the model. Whenever new data is available, the process of model retraining is triggered. This level of automation also includes data and model validation steps using testing scripts and/or specialised tools.
+
+### Level 3 MLOps CI/CD pipeline automation
+
+![CI/CD pipeline automation](/images/l5.png)
+**CI/CD pipeline automation**. In the final stage, we introduce a CI/CD system to perform fast and reliable ML model deployments in production. The core difference from the previous step is that we now automatically build, test, and deploy the Data, ML Model, and the ML training pipeline components.
+
+## 1. MLOps Design Phase
 
 https://www.wisdomgeek.com/development/data-science/converting-business-problem-machine-learning/
 
@@ -49,7 +68,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
      > [!Note]
      > This is a [real data set](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html) used in [real statistical medical research](https://imjohnstone.su.domains/WEBLIST/2004/LarsAnnStat04.pdf) that has been modified for the purposes of teaching data wrangling and feature engineering.
 
-## 2. Model Development
+## 2. MLOps Model Development Phase
 
 ### 2.1 Data Wrangling
 
@@ -75,7 +94,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 1. The [Model Testing and Validation Demonstration](/2.Model_Development/2.4.Model_Testing_and_Validation/2.4.1.model_test_and_validate.ipynb) provides a number of ways to evaluate, test and validate your model using a second set of test data and then refine your model. This demonstration uses a different regression algorithm to the course specifications.
 
-## 3. Operations
+## 3. MLOps Operations Phase
 
 ### 3.1 Deploying a Model
 
@@ -91,7 +110,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 - **Continuous Testing (CT)** is a property unique to ML systems, that's is concerned with automatically retraining and serving the models.
 
-[Watch this DataCamp Video](https://campus.datacamp.com/courses/fully-automated-mlops/automation-in-mlops-deployments?ex=10) about teh CI/CD/CT pipeline.
+[Watch this DataCamp Video](https://campus.datacamp.com/courses/fully-automated-mlops/automation-in-mlops-deployments?ex=10) about the CI/CD/CT pipeline.
 
 ---
 
@@ -183,7 +202,7 @@ Then, you create the pull request in the Git GUI asking to merge new-feature int
 
 5. Review Pull request
 
-The pull request may be evaluated by you, your team, a sub team or the senior software engineer. Any changes to the Pull request should be made in teh Pull request interface for documentation.
+The pull request may be evaluated by you, your team, a sub team or the senior software engineer. Any changes to the Pull request should be made in the Pull request interface for documentation.
 
 ```mermaid
 gitGraph
@@ -208,7 +227,7 @@ gitGraph
    Edit, stage, commit, and push updates to the central repository.
 
 7. Merge the feature
-   Once teh team is ready to accept the pull request, someone needs to merge the feature into the stable project (this can be done by anyone in the team):
+   Once the team is ready to accept the pull request, someone needs to merge the feature into the stable project (this can be done by anyone in the team):
 
 ```mermaid
 gitGraph
