@@ -5,7 +5,7 @@ This Jupyter Notebook collection is designed to support students understand Mach
 ![Course Specification MLOps Model](/images/MLOPS_Model.png)
 
 > [!Important]
-> This a corrected version of the MLOps course specification.
+> This a corrected version of the MLOps course specification, NESA have verbally agreed that the Course Specifications are wrong, we are waiting for an update.
 
 ## 3 Levels of MLOps Automation
 
