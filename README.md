@@ -32,9 +32,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 1. Defining the business problem to be solved
 
-   - Doctors often under estimate the progress of type II adult onset diabetes after diagnosis. Often resulting in the insufficient medical interventions and reduced health outcomes for patients.
-
-   - Doctors would like a valid and reliable tool for doctors to be able to enter an individuals health data and be provided with a valid and reliable prediction of the disease progression over the patients next 12 months.
+   - [Sales Force Health Cloud](https://www.salesforce.com/au/products/health-cloud/overview/) is one of the largest medical CRM's in Australia. Sales Force has identified an opportunity to expand their product to incorporate medical forecasting for patients using AI/ML models. Diabetes prevalence has slowly increased over the last twenty years, from 3.3% in 2001 to 5.3% in 2022. Sales Force background research has identified that Doctors often underestimate the progress of type II adult onset diabetes after diagnosis. Often resulting in insufficient medical interventions and reduced health outcomes for patients. Sales Force has approached you as a Data Engineer to develop a PoC diabetes forecasting service for doctors to be able to enter an individual's health data and be provided with a valid and reliable prediction of the disease progression over the patient's next 12 months.
 
 2. Refactoring the business problem into a machine learning problem
 
@@ -46,7 +44,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 4. Researching available data.
 
-   - Your have sourced a validated raw data set. The data is saved in the CSV file [2.1.2.Diabeties_Sample_Data.csv](/2.Model_Development/2.1.Data_Wrangling/2.1.2.Diabeties_Sample_Data.csv).
+   - You have sourced a validated raw data set. The data is saved in the CSV file [2.1.2.Diabeties_Sample_Data.csv](/2.Model_Development/2.1.Data_Wrangling/2.1.2.Diabeties_Sample_Data.csv).
 
      > [!Important]
      > The information and ranges provided below are to help students understand the domain of the data, it is not intended as medical or diagnostic advice.
