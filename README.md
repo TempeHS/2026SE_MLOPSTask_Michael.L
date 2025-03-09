@@ -1,11 +1,8 @@
 # Practical Application of NESA Software Engineering MLOps
 
-This Jupyter Notebook collection is designed to support students understand Machine Learning Operations (MLOps) at the manual level of MLOps automation, specifically it's practical processes as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27. Students can then explore further how these processes can be automated under a DevOps/MLOps model.
+This Jupyter Notebook collection is designed to support students in understanding Machine Learning Operations (MLOps) at the manual level of MLOps automation, specifically its practical processes as defined in the [NESA Software Engineering Course Specifications](https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/94e1eb0a-0df7-4dbe-9b72-5d5e0d17143a/software-engineering-11-12-higher-school-certificate-course-specifications.PDF) pg 27. Students can then explore further how these processes can be automated under a DevOps/MLOps model.
 
 ![Course Specification MLOps Model](/images/MLOPS_Model.png)
-
-> [!Important]
-> This a corrected version of the MLOps course specification, NESA have verbally agreed that the Course Specifications are wrong, we are waiting for an update.
 
 ## 3 Levels of MLOps Automation
 
@@ -14,7 +11,7 @@ To implement MLOps, a team will progress through three levels of automation.
 ### Level 1 MLOps Manual Process
 
 ![Manual Process](/images/l1.png)
-**Manual process** is the data science processes, which are performed at the beginning of implementing ML. This level has an experimental and iterative nature. Every step in each pipeline, such as data preparation and feature engineering, model training and testing, are executed manually. Data Engineers use Rapid Application Development (RAD) tools, such as Jupyter Notebooks.
+**Manual process** is the data science processes, which are performed at the beginning of implementing ML. This level has an experimental and iterative nature. Every step in each pipeline, such as data preparation and feature engineering, model training and testing, is executed manually. Data Engineers use Rapid Application Development (RAD) tools, such as Jupyter Notebooks.
 
 ### Level 2 MLOps ML pipeline automation
 
@@ -57,10 +54,10 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
      | DoT    | The patients date of testing records as D/MM/YYYY                                                                                                                                                                                                                                                    |
      | SEX    | Patients gender ---                                                                                                                                                                                                                                                                                  |
      | BMI,   | Patients body mass index, which gives an indication of the patients body size and is calculated using their weight and height ---                                                                                                                                                                    |
-     | BP     | Diastole blood pressure which is the pressure of blood on the walls of the patients arteries when their heart was relaxed. <80 is desirable, 80-95 is high >95 is very high.                                                                                                                         |
-     | TC     | Total cholesterol is a measure of the cholesterol in the patients body. Cholesterol is essential in order for your body to continue building healthy cells, however having high cholesterol can increase your risk of heart disease. <5.5 is desirable 5.5-6.6 is borderline and >6.5 is undesirable |
-     | BGU    | Patients fasting blood glucose levels. 75-99 is desirable and 100+ is undesirable.                                                                                                                                                                                                                   |
-     | FDR    | The number of family members in the individuals direct bloodline who have developed type 2 adult onset diabetes.                                                                                                                                                                                     |
+     | BP | Diastole blood pressure, which is the pressure of blood on the walls of the patient's arteries when their heart is relaxed. <80 is desirable, 80-95 is high >95 is very high.                                                                                                                         |
+     | TC     | Total cholesterol is a measure of the cholesterol in the patient's body. Cholesterol is essential in order for your body to continue building healthy cells; however, having high cholesterol can increase your risk of heart disease. <5.5 is desirable 5.5-6.6 is borderline, and >6.5 is undesirable |
+     | BGU    | Patients fasting blood glucose levels. 75-99 is desirable, and 100+ is undesirable.                                                                                                                                                                                                                   |
+     | FDR | The number of family members in the individual's direct bloodline who have developed type 2 adult-onset diabetes.                                                                                                                                                                                     |
      | Target | A quantitative measure of disease progression one year after baseline. Patients should aim towards `0` as this means the condition has not progressed further.                                                                                                                                       |
 
      > [!Note]
@@ -106,7 +103,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 ### 3.3 Monitoring model performance.
 
-- **Continuous Testing (CT)** is a property unique to ML systems, that's is concerned with automatically retraining and serving the models.
+- **Continuous Testing (CT)** is a property unique to ML systems that is concerned with automatically retraining and serving the models.
 
 [Watch this DataCamp Video](https://campus.datacamp.com/courses/fully-automated-mlops/automation-in-mlops-deployments?ex=10) about the CI/CD/CT pipeline.
 
@@ -116,7 +113,7 @@ https://www.wisdomgeek.com/development/data-science/converting-business-problem-
 
 ### MLOps Version Control
 
-Version control is essential for MLOps especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has the benefit of supporting collaboration in the SDLC.
+Version control is essential for MLOps, especially in the CI and CD pipeline (continuous integration and continuous delivery/deployment). This pipeline allows new features to be added while also keeping the main branch (also called the production branch) stable. This also has the benefit of supporting collaboration in the SDLC.
 
 1. Create a new branch for our feature.
 
@@ -163,7 +160,7 @@ gitGraph
 git push -u origin new-feature
 ```
 
-The main branch can continue to be maintained including integration of other new features. You can pull any changes into your feature branch.
+The main branch can continue to be maintained, including the integration of other new features. You can pull any changes into your feature branch.
 
 ```bash
 git pull -u origin main
@@ -173,7 +170,7 @@ This command pushes new-feature to the central repository (origin), and the -u f
 
 4. Create a Pull request for the completed feature.
 
-Before merging it into main, you need to file a pull request letting the rest of the team know your feature is ready for testing and integration.
+Before merging it into the 'main' branch, you need to file a pull request letting the rest of the team know your feature is ready for testing and integration.
 
 ```mermaid
 gitGraph
@@ -200,7 +197,7 @@ Then, you create the pull request in the Git GUI asking to merge new-feature int
 
 5. Review Pull request
 
-The pull request may be evaluated by you, your team, a sub team or the senior software engineer. Any changes to the Pull request should be made in the Pull request interface for documentation.
+The pull request may be evaluated by you, your team, a sub-team or the senior software engineer. Any changes to the Pull request should be made in the Pull request interface for documentation.
 
 ```mermaid
 gitGraph
@@ -262,14 +259,14 @@ git push
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cost                | Cost measures the performance of a machine learning model for a data set. Cost function quantifies the error between predicted and expected values and presents that error in the form of a single real number.                                                                                                                                     |
 | Data preprocessing  | Is another name for 'Data Wrangling' but generally refers to the simpler approaches.                                                                                                                                                                                                                                                                |
-| Data wrangling      | Data Wrangling is the process of evaluating, filtering, manipulating, and encoding data so that a machine learning algorithm can understand it and use the resulting output. The major goal of data preprocessing is to eliminate data issues such as missing values, improve data quality, and make the data useful for machine learning purposes. |
+| Data Wrangling      | Data Wrangling is the process of evaluating, filtering, manipulating, and encoding data so that a machine learning algorithm can understand it and use the resulting output. The major goal of data preprocessing is to eliminate data issues, such as missing values, improve data quality, and make the data useful for machine learning purposes. |
 | Feature             | A feature is an individual measurable property within a recorded dataset. In machine learning and statistics, features are often called “variables” or “attributes.”                                                                                                                                                                                |
-| Feature Engineering | Feature engineering, in data science, refers to manipulation — addition, deletion, combination, mutation — of your data set to improve machine learning model training, leading to better performance and greater accuracy. Effective feature engineering is based on sound knowledge of the business problem and the available data sources.       |
+| Feature Engineering | Feature engineering in data science refers to manipulation — addition, deletion, combination, mutation — of your data set to improve machine learning model training, leading to better performance and greater accuracy. Effective feature engineering is based on sound knowledge of the business problem and the available data sources.       |
 | Linear Regression   | Linear regression is a statistical technique used to find the relationship between variables. In an ML context, linear regression finds the relationship between features and a target.                                                                                                                                                             |
 | Mean                | The average value.                                                                                                                                                                                                                                                                                                                                  |
-| Median              | The mid point value.                                                                                                                                                                                                                                                                                                                                |
+| Median              | The mid-point value.                                                                                                                                                                                                                                                                                                                                |
 | Mode                | The most common value.                                                                                                                                                                                                                                                                                                                              |
-| Prediction          | Prediction in machine learning is to make a future guess about possible outcomes based on historical data.                                                                                                                                                                                                                                          |
+| Prediction          | Prediction in machine learning is making a future guess about possible outcomes based on historical data.                                                                                                                                                                                                                                          |
 | Range               | The lowest and highest value.                                                                                                                                                                                                                                                                                                                       |
 | Standard Deviation  | Standard deviation is a measure of the amount of variation or dispersion of a set of data values around their mean. In machine learning, it is an important statistical concept that is used to describe the spread or distribution of a dataset.s                                                                                                  |
 | Target              | The target variable is the variable whose values are modelled and predicted by other variables.                                                                                                                                                                                                                                                     |
