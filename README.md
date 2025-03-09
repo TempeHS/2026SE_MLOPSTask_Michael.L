@@ -21,7 +21,7 @@ To implement MLOps, a team will progress through three levels of automation.
 ### Level 3 MLOps CI/CD pipeline automation
 
 ![CI/CD pipeline automation](/images/l5.png)
-**CI/CD pipeline automation**. In the final stage, we introduce a CI/CD system to perform fast and reliable ML model deployments in production. The core difference from the previous step is that we now automatically build, test, and deploy the Data, ML Model, and the ML training pipeline components.
+**CI/CD pipeline automation**. In the final stage, we introduce a 'Continuous Integration', 'Continuous Deployment' and 'Continuous Testing' (CI/CD/CT) system to perform fast and reliable ML model deployments in production. The core difference from the previous step is that we now automatically build, deploy and test the Data, ML Model, and the ML training pipeline components.
 
 ## 1. MLOps Design Phase
 
