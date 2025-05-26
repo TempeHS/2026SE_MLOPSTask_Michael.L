@@ -12,5 +12,12 @@
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
-  "cSpell.words": ["iloc"]
+	"workbench.colorTheme": "Default Dark+",
+	"workbench.iconTheme": "vscode-icons",
+	"github.copilot.enable": {
+		"python": false,
+		"html": false,
+		"css": false,
+		"SQL": false
+	}
 }
