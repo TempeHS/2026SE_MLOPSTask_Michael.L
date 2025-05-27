@@ -25,7 +25,7 @@ To implement MLOps, a team will progress through three levels of automation.
 
 ## 1. MLOps Design Phase
 
-https://www.wisdomgeek.com/development/data-science/converting-business-problem-machine-learning/
+Students should document the design phase in the [Design Jupyter Notbook](/workspaces/Practical-Application-of-NESA-Software-Engineering-MLOps/1.Design/Design.ipynb).
 
 1. Defining the business problem to be solved
 
