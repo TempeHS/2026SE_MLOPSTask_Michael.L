@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-plt.style.use('style_Matplotlib_charts.mplstyle')
+plt.style.use('ggplot')
 from sklearn.linear_model import LinearRegression
 import pickle
 

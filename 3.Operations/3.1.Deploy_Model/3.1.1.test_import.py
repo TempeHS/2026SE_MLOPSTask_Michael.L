@@ -1,11 +1,9 @@
-import export_import
 import pickle
 import numpy as np
 
+filename = 'my_saved_model.sav'
 
-export_import.save_model()
-
-loaded_model = pickle.load(open('my_saved_model.sav', 'rb'))
+loaded_model = pickle.load(open(filename, 'rb'))
 predict = np.array([4]).reshape(1, -1)
 result = loaded_model.predict(predict)
 print(result[0])
