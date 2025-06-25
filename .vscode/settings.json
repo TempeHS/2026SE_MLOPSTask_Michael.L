@@ -6,19 +6,35 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "[jupyter]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   "editor.fontSize": 18,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "window.restoreWindows": "preserve",
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
+  "editor.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "monospace",
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vscode-icons",
   "github.copilot.enable": {
+    "*": true,
     "python": false,
     "html": false,
     "css": false,
-    "SQL": false
+    "sql": false,
+    "jupyter": false
   },
   "chat.agent.enabled": false
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "jupyter.askForKernelRestart": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  }
 }
