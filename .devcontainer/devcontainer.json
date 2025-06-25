@@ -1,12 +1,14 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "hostRequirements": {
-    "cpus": 4
+    "cpus": 4,
+    "storage": "32gb"
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
-  "postAttachCommand": {},
+  "onCreateCommand": "",
+  "updateContentCommand": "",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postAttachCommand": "",
   "portsAttributes": {
     "8888": {
       "label": "Environment"
@@ -33,23 +35,26 @@
         "workbench.editorAssociations": {
           "*.md": "vscode.markdown.preview.editor"
         },
-      	"workbench.colorTheme": "Default Dark+",
-      	"workbench.iconTheme": "vscode-icons",
-      	"github.copilot.enable": {
-      		"python": false,
-      		"html": false,
-      		"css": false,
-      		"SQL": false
-      	},
-        "chat.agent.enabled": false
+        "editor.fontFamily": "JetBrains Mono",
+        "terminal.integrated.fontFamily": "monospace",
+        "workbench.colorTheme": "Default Dark+",
+        "workbench.iconTheme": "vscode-icons",
+        "github.copilot.enable": {
+          "*": true,
+          "python": false,
+          "html": false,
+          "css": false,
+          "sql": false
+        }
       },
       "extensions": [
         "McCarter.start-git-bash",
         "yy0931.vscode-sqlite3-editor",
         "ms-python.python",
+        "ms-python.black-formatter",
         "esbenp.prettier-vscode",
         "oderwat.indent-rainbow",
-        "tomoki1207.pdf",
+        "mathematic.vscode-pdf",
         "GitHub.codespaces",
         "ms-python.debugpy",
         "ms-python.vscode-pylance",
@@ -63,9 +68,15 @@
         "ms-toolsai.jupyter-renderers",
         "ms-toolsai.vscode-jupyter-slideshow",
         "ms-toolsai.datawrangler",
-        "bierner.markdown-mermaid"
+        "bierner.markdown-mermaid",
+        "ms-toolsai.vscode-jupyter-powertoys",
+        "narasimapandiyan.jetbrainsmono",
+        "vscode-icons-team.vscode-icons"
       ]
     }
   },
-  "forwardPorts": [8888]
+  "forwardPorts": [8888],
+  "remoteEnv": {
+    "PIP_NO_CACHE_DIR": "1"
+  }
 }
