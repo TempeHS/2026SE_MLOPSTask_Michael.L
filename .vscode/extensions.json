@@ -10,7 +10,7 @@
         "GitHub.codespaces",
         "ms-python.debugpy",
         "ms-python.vscode-pylance",
-        "yahyabatulu.vscode-markdown-alert",
+        "saeris.markdown-github-alerts",
         "bierner.markdown-preview-github-styles",
         "mechatroner.rainbow-csv",
         "ms-python.pylint",
