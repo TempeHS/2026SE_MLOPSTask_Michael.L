@@ -1,0 +1,208 @@
+id,continent_id
+Afghanistan,_Asia
+Albania,_Europe
+Algeria,_Africa
+Andorra,_Europe
+Angola,_Africa
+Antigua and Barbuda,_North America
+Argentina,_South America
+Armenia,_Europe
+Australia,_Oceania
+Austria,_Europe
+Azerbaijan,_Europe
+Bahamas,_North America
+Bahrain,_Asia
+Bangladesh,_Asia
+Barbados,_North America
+Belarus,_Europe
+Belgium,_Europe
+Belize,_North America
+Benin,_Africa
+Bhutan,_Asia
+Bolivia,_South America
+Bosnia and Herzegovina,_Europe
+Botswana,_Africa
+Brazil,_South America
+Brunei,_Asia
+Bulgaria,_Europe
+Burkina Faso,_Africa
+Burundi,_Africa
+Cabo Verde,_Africa
+Cambodia,_Asia
+Cameroon,_Africa
+Canada,_North America
+Central African Republic,_Africa
+Chad,_Africa
+Chile,_South America
+China,_Asia
+Colombia,_South America
+Comoros,_Africa
+Congo,_Africa
+Costa Rica,_North America
+Cote d_Ivoire,_Africa
+Croatia,_Europe
+Cuba,_North America
+Cyprus,_Europe
+Czech Republic,_Europe
+Democratic People_s Republic of Korea,_Asia
+Democratic Republic of the Congo,_Africa
+Denmark,_Europe
+Djibouti,_Africa
+Dominica,_North America
+Dominican Republic,_North America
+Ecuador,_South America
+Egypt,_Africa
+El Salvador,_North America
+Equatorial Guinea,_Africa
+Eritrea,_Africa
+Estonia,_Europe
+Eswatini,_Africa
+Ethiopia,_Africa
+Federated States of Micronesia,_Oceania
+Fiji,_Oceania
+Finland,_Europe
+France,_Europe
+Gabon,_Africa
+Gambia,_Africa
+Georgia,_Europe
+Germany,_Europe
+Ghana,_Africa
+Greece,_Europe
+Grenada,_North America
+Guatemala,_North America
+Guinea,_Africa
+Guinea Bissau,_Africa
+Guyana,_South America
+Haiti,_North America
+Honduras,_North America
+Hong Kong,_Asia
+Hungary,_Europe
+Iceland,_Europe
+India,_Asia
+Indonesia,_Asia
+Iran,_Asia
+Iraq,_Asia
+Ireland,_Europe
+Israel,_Europe
+Italy,_Europe
+Jamaica,_North America
+Japan,_Asia
+Jordan,_Asia
+Kazakhstan,_Asia
+Kenya,_Africa
+Kiribati,_Oceania
+Korea,_Asia
+Kosovo,_Europe
+Kuwait,_Asia
+Kyrgyzstan,_Asia
+Laos,_Asia
+Latvia,_Europe
+Lebanon,_Asia
+Lesotho,_Africa
+Liberia,_Africa
+Libya,_Africa
+Liechtenstein,_Europe
+Lithuania,_Europe
+Luxembourg,_Europe
+Macau,_Asia
+Madagascar,_Africa
+Malawi,_Africa
+Malaysia,_Asia
+Maldives,_Asia
+Mali,_Africa
+Malta,_Europe
+Marshall Islands,_Oceania
+Mauritania,_Africa
+Mauritius,_Africa
+Mexico,_North America
+Moldova,_Europe
+Monaco,_Europe
+Mongolia,_Asia
+Montenegro,_Europe
+Morocco,_Africa
+Mozambique,_Africa
+Myanmar,_Asia
+Namibia,_Africa
+Nauru,_Oceania
+Nepal,_Asia
+Netherlands,_Europe
+New Zealand,_Oceania
+Nicaragua,_North America
+Niger,_Africa
+Nigeria,_Africa
+North Macedonia,_Europe
+Norway,_Europe
+Oman,_Asia
+Pakistan,_Asia
+Palau,_Oceania
+Palestine,_Asia
+Panama,_North America
+Papua New Guinea,_Oceania
+Paraguay,_South America
+Peru,_South America
+Philippines,_Asia
+Poland,_Europe
+Portugal,_Europe
+Qatar,_Asia
+Romania,_Europe
+Russia,_Europe
+Rwanda,_Africa
+Saint Kitts and Nevis,_North America
+Saint Lucia,_North America
+Saint Vincent and the Grenadines,_North America
+Samoa,_Oceania
+San Marino,_Europe
+Sao Tome and Principe,_Africa
+Saudi Arabia,_Asia
+Senegal,_Africa
+Serbia,_Europe
+Seychelles,_Africa
+Sierra Leone,_Africa
+Singapore,_Asia
+Slovakia,_Europe
+Slovenia,_Europe
+Solomon Islands,_Oceania
+Somalia,_Africa
+South Africa,_Africa
+South Sudan,_Africa
+Spain,_Europe
+Sri Lanka,_Asia
+Sudan,_Africa
+Suriname,_South America
+Sweden,_Europe
+Switzerland,_Europe
+Syria,_Asia
+Taiwan,_Asia
+Tajikistan,_Asia
+Tanzania,_Africa
+Thailand,_Asia
+Timor-Leste,_Asia
+Togo,_Africa
+Tonga,_Oceania
+Trinidad and Tobago,_North America
+Tunisia,_Africa
+Turkey,_Europe
+Turkmenistan,_Asia
+Tuvalu,_Oceania
+Uganda,_Africa
+Ukraine,_Europe
+United Arab Emirates,_Asia
+United Kingdom,_Europe
+Uruguay,_South America
+USA,_North America
+Uzbekistan,_Asia
+Vanuatu,_Oceania
+Vatican City,_Europe
+Venezuela,_South America
+Vietnam,_Asia
+XA,_Asia
+XE,_Europe
+XF,_Africa
+XM,_Multiple Continents
+XN,_North America
+XO,_Oceania
+XS,_South America
+XW,_Multiple Continents
+Yemen,_Asia
+Zambia,_Africa
+Zimbabwe,_Africa
