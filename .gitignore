@@ -170,4 +170,5 @@ wca_export/
 
 2.Model_Development/2.2.Feature_Engineering/2.2.1.unwrangled_results.csv
 2.Model_Development/2.2.Feature_Engineering/2.2.1.wrangled_results.csv
-2.Model_Development/2.3.Model_Training/2.3.1.model_ready_data.csv
+2.Model_Development/2.3.Model_Training/2.3.1.model_ready_data.csv.env
+.env
