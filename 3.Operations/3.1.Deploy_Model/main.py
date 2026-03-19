@@ -273,6 +273,8 @@ def predict():
         raw_val = request.form.get("events_completed")
 
     if raw_val is None:
+        if request.method == "GET":
+            return render_template("index.html")
         return render_template("index.html", error="events_completed is required")
 
     try:

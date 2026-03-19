@@ -13,7 +13,6 @@
     <link rel="manifest" href="/static/manifest.json" />
     <meta name="theme-color" content="#000" />
     <style>
-      /* Hero Banner */
       .hero-banner {
         background: linear-gradient(
           135deg,
@@ -217,7 +216,91 @@
     <section class="predict-section">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-6">
+          <div class="col-md-5">
+            <div class="card shadow-sm h-100">
+              <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">🏆 Top 10 Fastest 3x3x3 Solves</h4>
+              </div>
+              <div class="card-body p-0">
+                <table class="table table-striped table-hover mb-0">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>#</th>
+                      <th>Competitor</th>
+                      <th>Time (s)</th>
+                      <th>Competition</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Teodor Zajder</td>
+                      <td>2.76</td>
+                      <td>GLS Big Cubes Gdańsk 2026</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Xuanyi Geng (耿暄一)</td>
+                      <td>3.05</td>
+                      <td>Shenyang Spring 2025</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Tymon Kolasiński</td>
+                      <td>3.06</td>
+                      <td>HIT - Kona 2025</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Yiheng Wang (王艺衡)</td>
+                      <td>3.06</td>
+                      <td>Singapore Mofunland Cruise 2025</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Yiheng Wang (王艺衡)</td>
+                      <td>3.08</td>
+                      <td>Guangdong Revival & Rival 2026</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Yiheng Wang (王艺衡)</td>
+                      <td>3.08</td>
+                      <td>XMUM Cube Open 2025</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Yiheng Wang (王艺衡)</td>
+                      <td>3.09</td>
+                      <td>HIT - Hilo 2025</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Max Park</td>
+                      <td>3.13</td>
+                      <td>Pride in Long Beach 2023</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Yiheng Wang (王艺衡)</td>
+                      <td>3.23</td>
+                      <td>Guangdong Revival & Rival 2026</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Qixian Cao (曹岂娴)</td>
+                      <td>3.24</td>
+                      <td>Hangzhou Winter 2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer text-muted" style="font-size: 0.8rem">
+                Source: WCA Official Records - values updated as needed.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
             <div class="card shadow-sm">
               <div class="card-header bg-dark text-white">
                 <h4 class="mb-0">Make a Prediction</h4>
@@ -225,7 +308,7 @@
               <div class="card-body">
                 <p class="text-muted">
                   Enter the number of professional WCA events you have completed
-                  to predict your average solve time.
+                  to predict your average 3x3 solve time.
                 </p>
 
                 {% if error %}
@@ -235,7 +318,6 @@
                 {% endif %}
 
                 <form id="predict-form" action="/predict" method="POST">
-                  <!-- CSRF token -->
                   <input
                     type="hidden"
                     name="csrf_token"
